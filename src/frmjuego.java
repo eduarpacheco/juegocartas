@@ -31,13 +31,7 @@ public class frmjuego extends JFrame {
         getContentPane().add(btnVerificar);
 
         // (NUEVO) Agregamos botones para escalaras y puntaje
-        JButton btnEscaleras = new JButton("Buscar Escaleras");
-        btnEscaleras.setBounds(230, 10, 150, 25);
-        getContentPane().add(btnEscaleras);
-
-        JButton btnPuntaje = new JButton("Calcular Puntaje");
-        btnPuntaje.setBounds(390, 10, 150, 25);
-        getContentPane().add(btnPuntaje);
+        
 
         pnlJugador1 = new JPanel();
         pnlJugador1.setLayout(null);
@@ -77,35 +71,7 @@ public class frmjuego extends JFrame {
         jugador2 = new jugador();
 
         // Eventos nuevos
-        btnEscaleras.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                switch (tpJugadores.getSelectedIndex()) {
-                    case 0:
-                        JOptionPane.showMessageDialog(null, jugador1.getEscaleras());
-                        break;
-                    case 1:
-                        JOptionPane.showMessageDialog(null, jugador2.getEscaleras());
-                        break;
-                }
-            }
-        });
-
-        btnPuntaje.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                switch (tpJugadores.getSelectedIndex()) {
-                    case 0:
-                        JOptionPane.showMessageDialog(null,
-                                "Puntaje de cartas sueltas: " + jugador1.getPuntajeCartasSueltas());
-                        break;
-                    case 1:
-                        JOptionPane.showMessageDialog(null,
-                                "Puntaje de cartas sueltas: " + jugador2.getPuntajeCartasSueltas());
-                        break;
-                }
-            }
-        });
+        
 
     }
 
